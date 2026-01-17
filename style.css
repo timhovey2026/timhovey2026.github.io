@@ -5,104 +5,210 @@
 /* Magic Story font (self-hosted) */
 @font-face {
   font-family: "Magic Story";
-  src: url("./magic-story.woff2") format("woff2");
-       url("./magic-story.woff") format("woff");
+  src:
+    url("./magic-story.woff2") format("woff2"),
+    url("./magic-story.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
 /* -------------------------------------
    BASE STYLES
 ------------------------------------- */
+
+:root {
+  --bg: #faf9f7;
+  --panel: #f2efe9;
+  --ink: #2c2c2c;
+  --lavender: #867BBC;
+  --max: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
-  background: #faf9f7;
-  color: #867BBC;
-  line-height: 1.6;
+  background: var(--bg);
+  color: var(--lavender);
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
 }
 
 h1, h2, h3 {
   font-family: "Magic Story", serif;
-  font-weight: normal;
-  margin-top: 0;
-  color: #867BBC;
+  font-weight: 400;
+  margin: 0;
+  color: var(--lavender);
 }
 
 /* -------------------------------------
-   HEADER
+   HEADER + NAV
 ------------------------------------- */
 
 header {
-  padding: 4rem 1.5rem 3rem;
+  background: var(--panel);
+  padding: 1.25rem 1.25rem 2.25rem;
   text-align: center;
-  background: #f2efe9;
+}
+
+/* Nav bar */
+.top-nav {
+  max-width: var(--max);
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  text-decoration: none;
+  font-family: "Magic Story", serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.98rem;
+}
+
+.nav-links a:hover {
+  background: rgba(134, 123, 188, 0.12);
+}
+
+/* Hero titles */
+.page-hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem 0 0.5rem;
 }
 
 header h1 {
-  font-size: 2.6rem;
-  margin-bottom: 0.4rem;
+  font-size: 2.7rem;
+  margin-bottom: 0.35rem;
 }
 
 header h2 {
-  font-size: 1.2rem;
-  color: #867BBC;
+  font-size: 1.15rem;
+  color: var(--lavender);
 }
 
 /* -------------------------------------
-   BOOK COVER
+   MAIN LAYOUT
 ------------------------------------- */
+
+main {
+  width: 100%;
+}
+
+/* Book page section */
+.book-page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+  text-align: left; /* important: looks more like a real book page */
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.25rem;
+  align-items: start;
+}
+
+/* Cover */
+.book-cover {
+  margin: 0;
+}
 
 .cover {
-  display: block;
-  margin: 2.5rem auto 0;
-  max-width: 260px;
   width: 100%;
-  height: auto;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
-  border-radius: 4px;
+  max-width: 320px;
+  margin: 0 auto;
+  box-shadow: 10px 12px 26px rgba(0,0,0,0.14);
+  border-radius: 6px;
 }
 
-/* -------------------------------------
-   CONTENT
-------------------------------------- */
-
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 3rem 1.5rem;
-  text-align: center;
+/* Copy */
+.book-copy {
+  max-width: 620px;
 }
 
 .book-description {
-  font-size: 1.1rem;
-  margin-bottom: 1.6rem;
+  font-size: 1.06rem;
+  margin: 0 0 1rem;
+  color: var(--lavender);
+}
+
+/* Optional small note text */
+.fine-print {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-top: 1rem;
 }
 
 /* -------------------------------------
-   CALL TO ACTION
+   BUTTONS / CTA
 ------------------------------------- */
 
-.cta {
-  margin-top: 2.5rem;
+.cta-group {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
 }
 
-.cta a {
+.btn {
   display: inline-block;
-  padding: 0.85rem 2rem;
-  background: #2c2c2c;
-  color: #fff;
+  padding: 0.85rem 1.4rem;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 4px;
   font-size: 1rem;
+  border: 1px solid rgba(44,44,44,0.25);
+  background: transparent;
+  color: var(--ink);
 }
 
-.cta a:hover {
+.btn:hover {
+  border-color: rgba(44,44,44,0.55);
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.btn.primary:hover {
   background: #000;
+  border-color: #000;
 }
 
 /* -------------------------------------
@@ -110,23 +216,78 @@ section {
 ------------------------------------- */
 
 footer {
+  background: var(--panel);
+  padding: 2rem 1.25rem;
   text-align: center;
-  padding: 2rem 1rem;
+  color: var(--lavender);
+}
+
+.footer-links,
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a,
+.social-links a {
+  text-decoration: none;
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+  background: rgba(134, 123, 188, 0.12);
+}
+
+.copyright {
   font-size: 0.9rem;
-  color: #867BBC;
-  background: #f2efe9;
+  opacity: 0.9;
 }
 
 /* -------------------------------------
    MOBILE TWEAKS
 ------------------------------------- */
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2.1rem;
+@media (max-width: 820px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    text-align: center;
   }
 
-  .book-description {
+  .book-page {
+    text-align: center;
+  }
+
+  .book-copy {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left; /* keeps paragraphs readable */
+  }
+
+  .cta-group {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.15rem;
+  }
+
+  header h2 {
     font-size: 1.05rem;
+  }
+
+  .brand {
+    font-size: 1.45rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
   }
 }
