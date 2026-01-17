@@ -4,12 +4,25 @@
 
 /* Magic Story font (self-hosted) */
 @font-face {
-  font-family: "Magic Story";
+  font-family: "Magic Story OLD";
   src: url("./magic-story.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
    font-display: swap;
 }
+@font-face {
+    font-family: "Magic Story";
+    src: url("https://db.onlinewebfonts.com/t/57c5bc74b478c6623f7c4fd51c159f75.eot");
+    src: url("https://db.onlinewebfonts.com/t/57c5bc74b478c6623f7c4fd51c159f75.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/57c5bc74b478c6623f7c4fd51c159f75.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/57c5bc74b478c6623f7c4fd51c159f75.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/57c5bc74b478c6623f7c4fd51c159f75.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/57c5bc74b478c6623f7c4fd51c159f75.svg#Magic Story")format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* -------------------------------------
    BASE STYLES
