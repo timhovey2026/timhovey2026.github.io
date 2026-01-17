@@ -5,7 +5,7 @@
 /* Magic Story font (self-hosted) */
 @font-face {
   font-family: "Magic Story";
-  src: url("fonts/magic-story.otf") format("opentype");
+  src: url("/fonts/magic-story.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
