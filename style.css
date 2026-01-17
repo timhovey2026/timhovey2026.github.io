@@ -69,57 +69,48 @@ h1, h2, h3 {
 ------------------------------------- */
 
 header {
-  background: var(--panel);
-  padding: 1.25rem 1.25rem 2.25rem;
-  text-align: center;
+  background: var(--bg);
+  padding: 1.25rem 1.5rem 2.25rem;
 }
 
-/* Nav bar */
-.top-nav {
+/* Top bar with logo */
+.header-bar {
   max-width: var(--max);
-  margin: 0 auto 1.5rem;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-.brand {
-  text-decoration: none;
-  font-family: "Magic Story", serif;
-  font-size: 1.6rem;
-  letter-spacing: 0.2px;
-  white-space: nowrap;
+.logo-block {
+  text-align: right;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
+.logo-block img {
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin-left: auto;
 }
 
-.nav-links a {
-  text-decoration: none;
-  padding: 0.35rem 0.5rem;
-  border-radius: 6px;
-  font-size: 0.98rem;
-}
-
-.nav-links a:hover {
-  background: rgba(134, 123, 188, 0.12);
+.tagline {
+  margin-top: 0.35rem;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lavender);
 }
 
 /* Hero titles */
 .page-hero {
   max-width: var(--max);
-  margin: 0 auto;
-  padding: 1rem 0 0.5rem;
+  margin: 2.5rem auto 0;
+  text-align: center;
 }
 
 header h1 {
-  font-size: 2.7rem;
+  font-size: 2.8rem;
   margin-bottom: 0.35rem;
 }
 
