@@ -28,8 +28,8 @@
 ------------------------------------- */
 
 :root {
-  --bg: #faf9f7;
-  --panel: #f2efe9;
+  --bg: #fffff5;
+  --panel: #fffff5;
   --ink: #2c2c2c;
   --lavender: #867BBC;
   --max: 1000px;
@@ -41,8 +41,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Brandon Grotesque", -apple Roboto, Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--lavender);
   line-height: 1.65;
