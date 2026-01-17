@@ -5,9 +5,10 @@
 /* Magic Story font (self-hosted) */
 @font-face {
   font-family: "Magic Story";
-  src: url("magic-story.otf") format("opentype");
-  font-weight: normal;
+  src: url("./magic-story.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
+   font-display: swap;
 }
 
 /* -------------------------------------
