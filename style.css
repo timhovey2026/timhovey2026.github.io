@@ -97,8 +97,8 @@ header {
 .tagline {
   margin-top: 0.35rem;
   font-family: "Brandon Grotesque", sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
   color: var(--lavender);
 }
