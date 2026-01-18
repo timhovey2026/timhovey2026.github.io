@@ -210,6 +210,8 @@ main {
   background: var(--lavender);
   color: var(--bg);
   border: none;
+  transform: translateY(0);
+  transition: transform 150ms ease, filter 150ms ease;
 }
 
 .btn:hover {
