@@ -106,7 +106,7 @@ header {
 /* Hero titles */
 .page-hero {
   max-width: var(--max);
-  margin: 2.5rem auto 0;
+  margin: 1.4rem auto 0;
   text-align: center;
 }
 
@@ -132,7 +132,7 @@ main {
 .book-page {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 2.5rem 1.25rem 3rem;
+  padding: 1.75rem 1.25rem 3rem;
   text-align: left; /* important: looks more like a real book page */
 }
 
