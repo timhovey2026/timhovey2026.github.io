@@ -189,8 +189,14 @@ main {
 
 .author-note p {
   font-size: 1.05rem;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.45rem;
+  line-height: 1.6;
 }
+
+.author-note p:last-child {
+   margin-bottom: 0;
+}
+
 /* -------------------------------------
    BUTTON
 ------------------------------------- */
